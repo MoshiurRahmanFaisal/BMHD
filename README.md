@@ -31,7 +31,7 @@ The dataset includes **11 categories**:
 - Borderline Personality Disorder  
 - Depression  
 - Schizophrenia  
-- Self-Harm  
+- Self Harm  
 - Suicidal Thought  
 - Neutral  
 
