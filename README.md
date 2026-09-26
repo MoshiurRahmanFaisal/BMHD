@@ -26,7 +26,7 @@ The dataset includes **11 categories**:
 - Addiction  
 - Alcoholism  
 - Anxiety  
-- Asperger’s Syndrome  
+- Asperger's Syndrome  
 - Bipolar Disorder  
 - Borderline Personality Disorder  
 - Depression  
@@ -68,13 +68,18 @@ To create the Bengali dataset:
 
 ### Translation Quality
 
-Semantic alignment was validated using:
+**Automated metrics**, comparing back-translated English against the original:
 
 - **Jaccard Similarity:** 0.9997  
 - **BLEU Score:** 0.999  
 - **ROUGE-L Score:** 0.9998  
 
-These results indicate near-perfect preservation of meaning.
+**Independent human evaluation** was additionally conducted on a stratified sample of 1,066 pairs (~10% of the dataset), balanced across class and sequence length, and rated by two independent evaluators on a 5-point semantic equivalence scale:
+
+- **Mean Rating:** 4.675 / 5 (SD = 0.592)  
+- **94.5%** of pairs rated 4 or 5  
+
+Together, these results indicate near-perfect preservation of meaning, confirmed both by automated metrics and independent human judgement.
 
 ---
 
@@ -93,8 +98,8 @@ Ambiguous samples were removed to ensure high data quality.
 
 ### Inter-Annotator Agreement
 
-- **English:** Cohen’s Kappa = 0.91  
-- **Bengali:** Cohen’s Kappa = 0.89  
+- **English:** Cohen's Kappa = 0.91  
+- **Bengali:** Cohen's Kappa = 0.89  
 
 ---
 
@@ -103,6 +108,24 @@ Ambiguous samples were removed to ensure high data quality.
 - The dataset is **largely balanced** across classes  
 - Bengali texts show slightly higher token lengths and vocabulary diversity  
 - Mental health categories exhibit varying linguistic patterns, useful for interpretability research  
+
+---
+
+## Reproducibility
+
+- Train/test split: 80/20, stratified by class, fixed seed, performed once at the post level so parallel English–Bengali pairs never split across partitions  
+- Final models trained across 3 independent seeds, with results reported as mean ± standard deviation  
+
+---
+
+## Interpretability Analysis
+
+The dataset supports cross-lingual interpretability research using multiple attribution methods:
+
+- **Integrated Gradients** — cross-lingual attribution overlap between parallel English/Bengali predictions  
+- **SHAP** and **LIME** — cross-method agreement analysis on token-level explanations  
+
+This enables systematic comparison of *why* models predict as they do, across languages and across explanation methods, not just classification accuracy alone.
 
 ---
 
@@ -121,5 +144,5 @@ Ambiguous samples were removed to ensure high data quality.
 - Mental health text classification  
 - Cross-lingual and multilingual NLP  
 - Low-resource language modelling  
-- Model interpretability and explainability  
-- Transfer learning research  
+- Model interpretability and explainability (attribution-based and cross-method agreement)  
+- Transfer learning and zero-shot cross-lingual transfer research
