@@ -26,7 +26,7 @@ The dataset includes **11 categories**:
 - Addiction  
 - Alcoholism  
 - Anxiety  
-- Asperger's Syndrome  
+- Asperger's
 - Bipolar Disorder  
 - Borderline Personality Disorder  
 - Depression  
