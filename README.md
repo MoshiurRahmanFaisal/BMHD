@@ -146,3 +146,26 @@ This enables systematic comparison of *why* models predict as they do, across la
 - Low-resource language modelling  
 - Model interpretability and explainability (attribution-based and cross-method agreement)  
 - Transfer learning and zero-shot cross-lingual transfer research
+
+
+---
+
+## Citation
+
+If you use this dataset, please cite:
+
+> Faisal, M.R., Meem, S.I. & Uddin, S. Understanding Cross‑Lingual Model Behavior in Mental Health NLP: Evidence from English–Bengali Transformer Models. *Annals of Data Science* (2026). https://doi.org/10.1007/s40745-026-00743-y
+
+### BibTeX
+
+```bibtex
+@article{Faisal2026,
+  author  = {Faisal, Moshiur Rahman and Meem, Suraiya Islam and Uddin, Shahadat},
+  title   = {Understanding Cross-Lingual Model Behavior in Mental Health {NLP}: Evidence from {English}--{Bengali} Transformer Models},
+  journal = {Annals of Data Science},
+  year    = {2026},
+  issn    = {2198-5812},
+  doi     = {10.1007/s40745-026-00743-y},
+  url     = {https://doi.org/10.1007/s40745-026-00743-y}
+}
+```
